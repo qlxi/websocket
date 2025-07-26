@@ -5,7 +5,7 @@ LISTENING_ADDR = '0.0.0.0'
 if sys.argv[1:]:
   LISTENING_PORT = sys.argv[1]
 else:
-  LISTENING_PORT = 80  
+  LISTENING_PORT = 2095  
 
 PASS = ''
 
@@ -169,7 +169,7 @@ class ConnectionHandler(threading.Thread):
             host = host[:i]
         else:
             if self.method=='CONNECT':
-                port = 443
+                port = 8443
             else:
                 port = sys.argv[1]
 
